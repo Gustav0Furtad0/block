@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body {
+    overflow: hidden;
+}
+
+#game {
+    width: 100%;
+    height: 100vh;
+    background: url(https://img.freepik.com/premium-vector/pixel-art-landscape-pine-forest-mountains-8-bit-vector-background_360488-709.jpg?w=2000) no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+#missile {
+    position: absolute;
+    left: 300px;
+    top: 50%;
+    width: 120px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+}
+
+#missile img {
+    width: 100%;
+
+}
+
+.wall {
+    left: 100%;
+    position: absolute;
+    width: 150px;
+    height: 100vh;
+}
+
+.block {
+    background-image: url('https://pbs.twimg.com/media/E5pUn4DXEAUjh_O.png:large');
+    background-size: 90%;
+    height: 100vh;
+    transform: translate(0, -50%);
+}
+
+.block:first-child {
+    margin: 0 0 140% 0;
+}
+
+#startGame {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    background-color: white;
+    font-family: 'Share Tech Mono', monospace;
+    padding: 5px 10px;
+    border: solid 5px black;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+#walls {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#result {
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 50px;
+    color: white;
+    text-shadow: 0 0 10px black;
+    text-align: center;
+}
+
+#restart {
+    position: relative;
+    margin-top: 10px;
+    width: 30%;
+    background-color: white;
+    font-family: 'Share Tech Mono', monospace;
+    padding: 5px 10px;
+    border: solid 5px black;
+    border-radius: 10px;
+    cursor: pointer;
+}
